@@ -7,14 +7,14 @@ categories:
 tags:
   - Segment Tree
 gallery:
-- url: /assets/posts/20181006/segment_tree_01.jpeg
-  image_path: /assets/posts/20181006/segment_tree_01.jpeg
+- url: /assets/images/posts/20181006/segment_tree_01.jpeg
+  image_path: /assets/images/posts/20181006/segment_tree_01.jpeg
   alt: "placeholder image 1"
-- url: /assets/posts/20181006/segment_tree_02.jpeg
-  image_path: /assets/posts/20181006/segment_tree_02.jpeg
+- url: /assets/images/posts/20181006/segment_tree_02.jpeg
+  image_path: /assets/images/posts/20181006/segment_tree_02.jpeg
   alt: "placeholder image 2"
-- url: /assets/posts/20181006/segment_tree_03.jpeg
-  image_path: /assets/posts/20181006/segment_tree_03.jpeg
+- url: /assets/images/posts/20181006/segment_tree_03.jpeg
+  image_path: /assets/images/posts/20181006/segment_tree_03.jpeg
   alt: "placeholder image 3"
 last_modified_at: 2018-10-16
 ---
