@@ -1,12 +1,11 @@
 ---
-published: true
-layout: single
+layout: post
 title: "세그먼트 트리 (Segment Tree)"
 excerpt: ""
 categories:
-  - Edge Case
+  - algorithmn
 tags:
-  - content
+  - Segment Tree
 gallery:
 - url: /assets/posts/20181006/segment_tree_01.jpeg
   image_path: /assets/posts/20181006/segment_tree_01.jpeg
@@ -20,7 +19,7 @@ gallery:
 last_modified_at: 2018-10-16
 ---
 
-# 세그먼트 트리 (Segment Tree) 란 ?
+## 세그먼트 트리 (Segment Tree) 란 ?
 
 세그먼트 트리는 부분합을 binary tree 를 이용해 저장하는 자료구조입니다.
 - 부분합을 가장 단순히 저장하는 것은 배열을 이용하는 방법이죠 .. 
@@ -186,6 +185,8 @@ setUp() 메소드는 노드의 수 만큼 수행되므로 시간복잡도는 최
 - 현재 노드이 구간이 [0, 9] 인 경우 구간 합을 알 방법이 없습니다. 따라서 왼쪽 자노드와 오른쪽 자노드를 탐색하여 합을 구합니다.
 4. [left, right] 구간이 현재 노드의 구간과 겹치는 경우
 - 현재 노드의 구간이 [0, 2] 인 경우 2부분이 겹치므로 왼쪽 노드와 오른쪽 노드를 탐색하여 값을 더합니다.
+
+
 ```java
 /** 트리에서 부분합 찾기
   * @param left: 찾으려는 시작 구간   
