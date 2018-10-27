@@ -128,8 +128,11 @@ public void update(int index, long diff) {
 }
 ```
 
+해당 글은 백준님의 세그먼트 트리 게시물을 읽고 작성하였습니다.
+- 백준님의 글 : https://www.acmicpc.net/blog/view/21
 
 ### 전체 소스
+- 백준 2042번 문제 : <https://www.acmicpc.net/problem/2042>
 - 팬윅 트리 : <https://github.com/kimkoungho/BaekJoonOnlineJudge/blob/master/src/common/FenwickTree.java>
 
 
