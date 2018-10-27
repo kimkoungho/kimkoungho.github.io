@@ -1,30 +1,20 @@
 ---
-layout: post
 title: "세그먼트 트리 (Segment Tree)"
 excerpt: ""
-categories:
-  - algorithmn
+categories: algorithms
 tags:
   - Segment Tree
-gallery:
-- url: /assets/images/posts/20181006/segment_tree_01.jpeg
-  image_path: /assets/images/posts/20181006/segment_tree_01.jpeg
-  alt: "placeholder image 1"
-- url: /assets/images/posts/20181006/segment_tree_02.jpeg
-  image_path: /assets/images/posts/20181006/segment_tree_02.jpeg
-  alt: "placeholder image 2"
-- url: /assets/images/posts/20181006/segment_tree_03.jpeg
-  image_path: /assets/images/posts/20181006/segment_tree_03.jpeg
-  alt: "placeholder image 3"
 last_modified_at: 2018-10-16
 ---
 
 ## 세그먼트 트리 (Segment Tree) 란 ?
 
-세그먼트 트리는 부분합을 binary tree 를 이용해 저장하는 자료구조입니다.
+세그먼트 트리는 구간합을 binary tree 를 이용해 저장하는 자료구조입니다.
 - 부분합을 가장 단순히 저장하는 것은 배열을 이용하는 방법이죠 .. 
+- 구간합은 사실 부분합을 이용해서 구할 수 있습니다. 
+- ex) 부분합 배열을 이용하여 2 ~ 4 번 합을 구하는 방법은 sum[4] - sum[1] 입니다.
 
-### Example
+### 배열을 이용하여 부분합을 저장 Example
 ```java
 /** 누적합을 저장할 배열을 세팅 */
 int[] getSumed(int[] input){
@@ -48,6 +38,7 @@ int getSum(int[] sumed, int start, int end){
 - 위 처럼 배열을 이용한 경우
 1. 원본 배열의 값을 변경 
 2. 누적합을 저장한 배열을 변경
+
 ### Example
 ```java
 void changeValue(int[] input, int[] sumed, int targetIndex, int newValue){
@@ -61,11 +52,12 @@ void changeValue(int[] input, int[] sumed, int targetIndex, int newValue){
   }
 }
 ```
+
 - 이런 경우 O(N)의 시간복잡도가 걸리게 됩니다. 따라서 원본 배열의 값이 계속 바뀌는 상황에서는 너무 오랜 시간이 걸리게 됩니다.
 - 세그먼트 트리를 이용하면 이진트리의 특성을 살려 해당 연산을 O(logN) 의 시간복잡도를 보장할 수 있습니다.
 
 ex) N = 10인 경우 세그먼트 트리
-![No Image](/assets/posts/20181006/segment_tree_01.jpeg)
+![No Image](/assets/images/posts/20181016/segment_tree_01.jpeg)
 
 - 각 노드를 탐색함으로써 특정 구간의 부분합 정보를 알 수 있습니다.
 
@@ -174,7 +166,7 @@ setUp() 메소드는 노드의 수 만큼 수행되므로 시간복잡도는 최
 
 ### 검색
 2 ~ 4 까지 합을 구하는 경우
-![No Image](/assets/posts/20181006/segment_tree_02.jpeg)
+![No Image](/assets/images/posts/20181016/segment_tree_02.jpeg)
 
 [left, right] 구간의 합을 검색하려고 합니다. 이때 특정 노드에 방문했을때 크게 4가지 경우로 나뉘게 됩니다.
 1. [left, right] 구간이 현재 노드의 구간과 겹치지 않는 경우 
@@ -221,7 +213,7 @@ public long getSum(int left, int right, int nodeIndex) {
 ### 업데이트 
 값을 변경하는 경우, 변경할 값이 있는 leaf 노드의 모든 부모노드들을 업데이트 해야합니다.
 ex) 5 번 인덱스의 값을 변경하는 경우
-![No Image](/assets/posts/20181006/segment_tree_03.jpeg)
+![No Image](/assets/images/posts/20181016/segment_tree_03.jpeg)
 
 ```java
 /** 외부에서 호출할 업데이트 메소드 
@@ -262,11 +254,8 @@ private void treeUpdate(int index, int nodeIndex, long diff) {
 - 백준님의 글 : https://www.acmicpc.net/blog/view/9
 
 ### 전체 소스
-백준 2042 번 문제를 풀면서 구현했습니다.
-https://www.acmicpc.net/problem/2042
-https://github.com/kimkoungho/BaekJoonOnlineJudge/blob/master/src/Problem_2042.java
+- 세그먼트 트리 : <https://github.com/kimkoungho/BaekJoonOnlineJudge/blob/master/src/common/SegmentTree.java>
 
-
-Reference
-https://www.acmicpc.net/blog/view/9
-https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%A7%84_%ED%8A%B8%EB%A6%AC
+## Reference
+<https://www.acmicpc.net/blog/view/9>
+<https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%A7%84_%ED%8A%B8%EB%A6%AC>

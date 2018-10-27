@@ -11,9 +11,9 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
-  - title: "Archive"
-    url: /year-archive/
-  - title: "tag"
-    url: /tags/
-  - title: "Category"
-    url: /categories/
+  # - title: "Archive"
+  #   url: /year-archive/
+  # - title: "tag"
+  #   url: /tags/
+  # - title: "Category"
+  #   url: /categories/
