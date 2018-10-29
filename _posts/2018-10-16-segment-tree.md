@@ -251,10 +251,11 @@ private void treeUpdate(int index, int nodeIndex, long diff) {
 ```
 
 해당 글은 백준님의 세그먼트 트리 게시물을 읽고 작성하였습니다.
-- 백준님의 글 : https://www.acmicpc.net/blog/view/9
+- 백준님의 글 : <https://www.acmicpc.net/blog/view/9>
 
 ### 전체 소스
-- 세그먼트 트리 : <https://github.com/kimkoungho/BaekJoonOnlineJudge/blob/master/src/common/SegmentTree.java>
+- 백준 2042번 문제 : <https://www.acmicpc.net/problem/2042>
+- 세그먼트 트리 : <https://github.com/kimkoungho/BaekJoonOnlineJudge/blob/master/src/Problem_2042/SegmentTree.java>
 
 ## Reference
 <https://www.acmicpc.net/blog/view/9>
