@@ -133,12 +133,12 @@ public void update(int index, long diff) {
 
 ### 전체 소스
 - 백준 2042번 문제 : <https://www.acmicpc.net/problem/2042>
-- 팬윅 트리 : <https://github.com/kimkoungho/BaekJoonOnlineJudge/blob/master/src/common/FenwickTree.java>
+- 팬윅 트리 : <https://github.com/kimkoungho/BaekJoonOnlineJudge/blob/master/src/Problem_2042/FenwickTree.java>
 
 
 ## Reference
-<https://www.acmicpc.net/blog/view/21>
-<https://www.crocus.co.kr/666>
-<https://en.wikipedia.org/wiki/Fenwick_tree>
+<https://www.acmicpc.net/blog/view/21> <br>
+<https://www.crocus.co.kr/666><br>
+<https://en.wikipedia.org/wiki/Fenwick_tree><br>
 <http://secmem.tistory.com/486>
 

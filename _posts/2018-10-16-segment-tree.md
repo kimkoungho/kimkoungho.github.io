@@ -258,5 +258,5 @@ private void treeUpdate(int index, int nodeIndex, long diff) {
 - 세그먼트 트리 : <https://github.com/kimkoungho/BaekJoonOnlineJudge/blob/master/src/Problem_2042/SegmentTree.java>
 
 ## Reference
-<https://www.acmicpc.net/blog/view/9>
+<https://www.acmicpc.net/blog/view/9><br>
 <https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%A7%84_%ED%8A%B8%EB%A6%AC>
