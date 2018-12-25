@@ -137,8 +137,8 @@ public void update(int index, long diff) {
 
 
 ## Reference
-<https://www.acmicpc.net/blog/view/21> <br>
-<https://www.crocus.co.kr/666><br>
-<https://en.wikipedia.org/wiki/Fenwick_tree><br>
+<https://www.acmicpc.net/blog/view/21>
+<https://www.crocus.co.kr/666>
+<https://en.wikipedia.org/wiki/Fenwick_tree>
 <http://secmem.tistory.com/486>
 
