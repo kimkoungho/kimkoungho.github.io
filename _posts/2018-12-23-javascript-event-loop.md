@@ -108,7 +108,6 @@ processNextMessage() 메소드는 다음 실행할 대상을 실행하는 코드
 
 TODO 리스트
 - Javascript 엔진에 대한 조사
-- 프로미스, await 등 ES6 에서의 비동기 메소드들에 대한 내용 
 - WEB API 리스트 : <https://developer.mozilla.org/ko/docs/WebAPI>
 
 ## Reference 
