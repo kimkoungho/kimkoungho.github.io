@@ -1,7 +1,7 @@
 ---
 title: "크로스 도메인 이슈(Cross-Domain Issue)"
 excerpt: ""
-categories: javascript
+categories: security
 tags:
   - Cross-Domain Issue
   - Same-origin Policy
