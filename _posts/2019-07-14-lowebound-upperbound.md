@@ -201,9 +201,10 @@ v - upper bound
 > 
 binary search 는 배열에서 찾으려는 값(key)가 해당 배열에 있다는 가정이 있음  
 따라서 값을 찾지 못했을 경우, 음수 값을 반환
-실제로 [c++ std::binary_search](https://en.cppreference.com/w/cpp/algorithm/binary_search) 의 구현에서 내부적으로 std::lower_bound() 호출하여 구현하고 있음 
+실제로 [c++ std::binary_search](https://en.cppreference.com/w/cpp/algorithm/binary_search) 의 구현에서 내부적으로 std::lower_bound() 호출하여 구현하고 있음  
 
 
+[git 소스](https://github.com/kimkoungho/Algorithm/blob/master/src/search/BinarySearch.java)
 
 ### Reference
 - <https://ko.wikipedia.org/wiki/%EC%83%81%ED%95%9C%EA%B3%BC_%ED%95%98%ED%95%9C>
