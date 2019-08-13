@@ -363,6 +363,9 @@ public String jsonpTest(@RequestParam(value = "callback") String callback){
 - 요청 헤더에 Origin 속성에서 클라이언트의 호스트 정보를 알 수 있는 것을 이용하는 방식으로 서버 측에서 Origin 헤더를 검사하여 컨텐츠 접근을 허용하는 방식
 
 
+### TODO
+- Ajax 요청은 쿠키 업데이트 불가 
+<https://stackoverflow.com/questions/3340797/can-an-ajax-response-set-a-cookie>
 
 
 ### Reference
