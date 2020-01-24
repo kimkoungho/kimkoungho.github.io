@@ -16,7 +16,7 @@ last_modified_at: 2019-03-25
 ## Javascript 런타임 환경
 - Javascript 런타임 환경은 일반적으로 브라우저를 일컫는 말
 ![No Image](/assets/images/posts/20181223/javascript_runtime_enviornment.jpeg)
-<https://codenotcode.com/my-event-loop-beebef81cd46>
+출처: [Rod Machen의 JS Event Loop](https://codenotcode.com/my-event-loop-beebef81cd46)
 - 위 그림은 브라우저의 JS 런타임 환경에서 이벤트 루프를 설명하기 위해 필요한 것을 묘사
 
 
@@ -146,7 +146,7 @@ Promise.resolve().then(function promiseCallback1() {
 
 - 위 결과를 보면 setTimeout 보다 promise1 이 먼저 출력된다.
 - 이것은 바로 이벤트 루프 에서 task (macro task)과 micro task 로 인해 발생하는 현상이다.
-- [블로그](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)에서 설명하듯이 프로미스는 micro task 로써 항상 일반 GUI 작업 or AJAX 와 같은 macro task 보다 먼저 수행함을 보장한다.
+- [Jake 의 JS microtasks queue](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)에서 설명하듯이 프로미스는 micro task 로써 항상 일반 GUI 작업 or AJAX 와 같은 macro task 보다 먼저 수행함을 보장한다.
 
 **코드의 실행순서**
 > 
@@ -172,15 +172,18 @@ Promise.resolve().then(function promiseCallback1() {
 ## TODO 리스트
 - Javascript 엔진에 대한 조사
 - Node JS 환경에서의 이벤트 루프
-- WEB API 리스트 : <https://developer.mozilla.org/ko/docs/WebAPI>
+- [MDN WEB API 리스트](https://developer.mozilla.org/ko/docs/WebAPI)
 
 
 ## Reference 
-- <https://meetup.toast.com/posts/89>
-- <https://codenotcode.com/my-event-loop-beebef81cd46>
-- <https://engineering.huiseoul.om/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EA%B0%80-%EC%97%94%EC%A7%84-%EB%9F%B0%ED%83%80%EC%9E%84-%EC%BD%9C%EC%8A%A4%ED%83%9D-%EA%B0%9C%EA%B4%80-ea47917c8442>
-- <https://engineering.huiseoul.com/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EA%B0%80-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%A3%A8%ED%94%84%EC%99%80-%EB%B9%84%EB%8F%99%EA%B8%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98-%EB%B6%80%EC%83%81-async-await%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%BD%94%EB%94%A9-%ED%8C%81-%EB%8B%A4%EC%84%AF-%EA%B0%80%EC%A7%80-df65ffb4e7e>
-- <https://developer.mozilla.org/ko/docs/WebAPI>
-- <https://stackoverflow.com/questions/28921127/how-to-wait-for-a-javascript-promise-to-resolve-before-resuming-function>
-- <https://stackoverflow.com/questions/25915634/difference-between-microtask-and-macrotask-within-an-event-loop-context>
-- <https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/>
+- [TOAST Meetup 자바스크립트와 이벤트 루프](https://meetup.toast.com/posts/89)
+- [Rod Machen의 JS Event Loop](https://codenotcode.com/my-event-loop-beebef81cd46)
+- [Sunki Baek 의 JS 이벤트 루프와 async, await](https://engineering.huiseoul.com/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EA%B0%80-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%A3%A8%ED%94%84%EC%99%80-%EB%B9%84%EB%8F%99%EA%B8%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98-%EB%B6%80%EC%83%81-async-await%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%BD%94%EB%94%A9-%ED%8C%81-%EB%8B%A4%EC%84%AF-%EA%B0%80%EC%A7%80-df65ffb4e7e)
+- [WEB API 리스트](https://developer.mozilla.org/ko/docs/WebAPI)
+- [Jake 의 JS microtasks queue](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
+- [HTML 도큐 이벤트루프](https://html.spec.whatwg.org/multipage/webappapis.html#event-loops)
+- [stackoverflow JS promise 와 resolve](https://stackoverflow.com/questions/28921127/how-to-wait-for-a-javascript-promise-to-resolve-before-resuming-function)
+- [stackoverflow JS 이벤트 루프에서 microtask vs macrotask](https://stackoverflow.com/questions/25915634/difference-between-microtask-and-macrotask-within-an-event-loop-context)
+- [stackoverflow JS 이벤트 루프는 어떻게 실행 되는가](https://stackoverflow.com/questions/38705444/javascript-event-loop-where-do-web-apis-get-executed)
+- [MDN 의 WEB API 도큐](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+- [MDN WEB API 리스트](https://developer.mozilla.org/ko/docs/WebAPI)

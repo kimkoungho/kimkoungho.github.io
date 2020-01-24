@@ -292,7 +292,7 @@ $(".movePage").click(clickMovePage);
 
 ### 2.Promise
 - 이러한 JS 의 콜백 지옥에 대한 대안으로 Promise.js 가 라이브러리 형태로 계속 사용되어 왔다.
-- [MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) 의 정의에 따르면, 프로미스란 비동기 작업의 성공, 실패에 대한 핸들러를 연결해주는 대리자이다.
+- [MDN 프로미스](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) 의 정의에 따르면, 프로미스란 비동기 작업의 성공, 실패에 대한 핸들러를 연결해주는 대리자이다.
 - 프로미스는 프로미스 객체를 반환함으로써 비동기 콜백에 대한 처리를 좀 더 편리하게 할 수 있다.
 - Promise.js 는 ES6(ECMA 2015+) 에서 정식으로 언어적 차원에서 지원을 시작했다.
 - 초기에는 브라우저 별로 지원하지 않는 브라우저들이 있었으나 .. 최근 브라우저에서는 모두 지원한다고 함.
@@ -360,7 +360,7 @@ promise1
   * Fulfilled(실행) : 비동기 처리가 완료되어 프로미스가 결과를 반환한 상태 
   * Rejected(실패) : 비동기 처리가 실패하거나 오류가 발생한 상태 
 
-- 프로미스 workflow - 출처: [MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- 프로미스 workflow - 출처: [MDN 프로미스](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 ![No Image](/assets/images/posts/20190217/promises_workflow.png)
   * Promise 는 Promise 객체를 생성후 비동기 처리가 완료되지 않은것을 의미함 - pending 상태
   * 비동기 처리가 완료된 경우
@@ -533,7 +533,7 @@ Promise.race([
 4. 3개의 프로미스 종료후 걸린 시간 출력 - 대략 1초
 
 ### 3.Generator 
-- [MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/function*)의 정의에 따르면, Generator(제네레이터)는 실행 도중 일시정지가 가능한 함수이다.
+- [MDN function*](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/function*)의 정의에 따르면, Generator(제네레이터)는 실행 도중 일시정지가 가능한 함수이다.
 - 기존에 JS 프로세스를 일시정지 할 수 있는 방법은 alert, confirm, prompt 를 사용하는 방법이 있었다. 하지만 이 방법은 사용자의 이벤트에 의존적임으로 종료 시점을 사용자에 의존적일 수 밖에 없었다.
 - 하지만 제네레이터를 이용한다면, 순수 스크립트 만으로도 일시정지와 재실행이 가능하다는 장점이 있다.
 - 제네레이터의 제약은 생성자로써 사용될 수 없다는 것이다. (Type Error 를 발생시킨다.)
@@ -778,8 +778,8 @@ $(".movePage").click(clickMovePage);
 ```
 
 ### 4.Async / Await
-- [MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/async_function)의 정의에 따르면, async 함수는 여러 프로미스의 동작을 동기 스럽게 사용하도록 돕는다.
-- async function 의 선언은 [AsyncFunction](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction) 객체를 반환하는 하나의 비동기 함수를 정의하는 것을 의미함
+- [MDN async function](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/async_function)의 정의에 따르면, async 함수는 여러 프로미스의 동작을 동기 스럽게 사용하도록 돕는다.
+- async function 의 선언은 [MDN AsyncFunction 가이드](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction) 객체를 반환하는 하나의 비동기 함수를 정의하는 것을 의미함
 - 제네레이터와 프로미스를 묶어서 사용하는 것으로 볼 수 있음
 - async/await 은 ECMAScript 2017 에서 발표되었다. 
 
@@ -1063,17 +1063,17 @@ $(".movePage").click(clickMovePage);
 
 
 ## Reference
-- <https://librewiki.net/wiki/%EC%BD%9C%EB%B0%B1_%EC%A7%80%EC%98%A5>
-- <http://callbackhell.com/>
-- <https://medium.com/@ejpbruel/the-drawbacks-of-callbacks-or-why-promises-are-great-5dedf2c98c67>
-- <https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise>
-- <https://stackoverflow.com/questions/42118900/when-is-the-body-of-a-promise-executed>
-- <https://poiemaweb.com/es6-promise>
-- <https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/function*>
-- <https://meetup.toast.com/posts/93>
-- <https://codeburst.io/understanding-generators-in-es6-javascript-with-examples-6728834016d5>
-- <https://meetup.toast.com/posts/73>
-- <https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/async_function>
-- <https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction>
-- <https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/await>
-- <https://javascript.info/async-await>
+- [리브레 위키 콜백지옥](https://librewiki.net/wiki/%EC%BD%9C%EB%B0%B1_%EC%A7%80%EC%98%A5)
+- [callbackhell.com](http://callbackhell.com/)
+- [Eddy Bruel의 callback 대안 promise](https://medium.com/@ejpbruel/the-drawbacks-of-callbacks-or-why-promises-are-great-5dedf2c98c67)
+- [stackoverflow promise 언제 실행되나](https://stackoverflow.com/questions/42118900/when-is-the-body-of-a-promise-executed)
+- [poiemaweb es6의 프로미스](https://poiemaweb.com/es6-promise)
+- [Arfat Salman의 ES6 의 generator](https://codeburst.io/understanding-generators-in-es6-javascript-with-examples-6728834016d5)
+- [TOAST Meetup generator](https://meetup.toast.com/posts/93)
+- [TOAST Meetup generator 를 사용한 비동기 프로그래밍](https://meetup.toast.com/posts/73)
+- [MDN Promise](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [MDN function*](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/function*)
+- [MDN async_function](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/async_function)
+- [MDN AsyncFunction](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
+- [MDN await](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/await)
+- [javascriptinfo async-await](https://javascript.info/async-await)

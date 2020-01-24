@@ -148,7 +148,7 @@ private void removePermutation(int index) {
 
 ## 3. Heap's algorithm
 
-[위키](https://en.wikipedia.org/wiki/Heap%27s_algorithm) 의 정의  
+[위키 Heap's_algorithm](https://en.wikipedia.org/wiki/Heap%27s_algorithm) 의 정의  
 Heap's Alogrithm 은 n 개의 객체 배열에서 가능한 **모든 순열을 생성하는 알고리즘**  
 1963년 B. R. Heap 이 최초로 제안한 알고리즘으로 순열을 계산할 때, 1쌍의 원소를 교환함으로써 이전에 계산한 순열을 이용하여 순열을 계산하는 방법
 
@@ -526,19 +526,18 @@ private boolean nextPermutation(Object[] inputs) {
 [Lexicographic algorithm 소스](https://github.com/kimkoungho/Algorithm/blob/master/src/permutation/LexicographicPermutation.java)
 
 
-## [전체 코드 git 링크](https://github.com/kimkoungho/Algorithm/tree/master/src/permutation)
+- 코드 
+[전체 코드 git 링크](https://github.com/kimkoungho/Algorithm/tree/master/src/permutation)
 
 ## Reference
-- <http://www.algocoding.net/design/search/permutation.html>
-- <https://www.topcoder.com/blog/generating-permutations/>
-- <https://www.topcoder.com/blog/generating-permutations/>
-- <https://en.wikipedia.org/wiki/Heap%27s_algorithm>
-- <http://ruslanledesma.com/2016/06/17/why-does-heap-work.html>
-- <https://stackoverflow.com/questions/42877789/heaps-algorithm-time-complexity>
-- <https://en.wikipedia.org/wiki/Steinhaus%E2%80%93Johnson%E2%80%93Trotter_algorithm>
-- <https://tropenhitze.wordpress.com/2010/01/25/steinhaus-johnson-trotter-permutation-algorithm-explained-and-implemented-in-java/>
-- <https://commons.apache.org/proper/commons-collections/jacoco/org.apache.commons.collections4.iterators/PermutationIterator.java.html>
-- <https://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order>
-- <https://www.nayuki.io/page/next-lexicographical-permutation-algorithm>
-- <https://www.quora.com/How-would-you-explain-an-algorithm-that-generates-permutations-using-lexicographic-ordering>
+- [topcoder generating-permutations](https://www.topcoder.com/blog/generating-permutations/)
+- [위키 Heap's_algorithm](https://en.wikipedia.org/wiki/Heap%27s_algorithm)
+- [Ruslan Ledesma-Garza why-does-heap-work](http://ruslanledesma.com/2016/06/17/why-does-heap-work.html)
+- [stackoverflow 의 heaps-algorithm-time-complexity](https://stackoverflow.com/questions/42877789/heaps-algorithm-time-complexity)
+- [위키 Steinhaus–Johnson–Trotter_algorithm](https://en.wikipedia.org/wiki/Steinhaus%E2%80%93Johnson%E2%80%93Trotter_algorithm)
+- [Ragavan N 의 steinhaus-johnson-trotter-permutation-algorithm-explained-and-implemented-in-java](https://tropenhitze.wordpress.com/2010/01/25/steinhaus-johnson-trotter-permutation-algorithm-explained-and-implemented-in-java/)
+- [아파치 오픈소스 PermutationIterator.java](https://commons.apache.org/proper/commons-collections/jacoco/org.apache.commons.collections4.iterators/PermutationIterator.java.html)
+- [위키 Permutation 중 Generation_in_lexicographic_order](https://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order)
+- [nayuki 의 next-lexicographical-permutation-algorithm](https://www.nayuki.io/page/next-lexicographical-permutation-algorithm)
+- [quora 의 generates-permutations-using-lexicographic-ordering](https://www.quora.com/How-would-you-explain-an-algorithm-that-generates-permutations-using-lexicographic-ordering)
 
