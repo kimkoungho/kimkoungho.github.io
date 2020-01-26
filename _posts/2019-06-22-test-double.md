@@ -191,20 +191,20 @@ TODO:
 - mockito 정리 
 
 ### Reference
-- <http://xunitpatterns.com/Test%20Double.html>
-- <http://xunitpatterns.com/Fake%20Object.html>
-- <http://xunitpatterns.com/Test%20Stub.html>
-- <http://xunitpatterns.com/Mock%20Object.html>
-- <http://xunitpatterns.com/Test%20Spy.html>
-- <http://xunitpatterns.com/Mocks,%20Fakes,%20Stubs%20and%20Dummies.html>
-- <https://www.slideshare.net/gyumee/ss-90206560>
-- <https://en.wikipedia.org/wiki/Mock_object>
-- <https://blog.pragmatists.com/test-doubles-fakes-mocks-and-stubs-1a7491dfa3da>
-- <http://testing.jabberstory.net/>
-- <https://martinfowler.com/articles/mocksArentStubs.html>
-- <http://spockframework.org/spock/docs/1.1/all_in_one.html#Stubs>
-- <https://stackoverflow.com/questions/24413184/difference-between-mock-stub-spy-in-spock-test-framework>
-- <https://www.solutionsiq.com/resource/blog-post/to-mock-or-not-to-mock-is-that-even-a-question/>
-- <https://github.com/openjdk-mirror/jdk7u-jdk/blob/master/src/share/classes/java/util/HashSet.java>
+- [xUnit Test Double](http://xunitpatterns.com/Test%20Double.html)
+- [xUnit Test Object](http://xunitpatterns.com/Fake%20Object.html)
+- [xUnit Test Stud](http://xunitpatterns.com/Test%20Stub.html)
+- [xUnit Test Mock](http://xunitpatterns.com/Mock%20Object.html)
+- [xUnit Test Spy](http://xunitpatterns.com/Test%20Spy.html)
+- [xUnit Mocks, Fakes, Stubs](http://xunitpatterns.com/Mocks,%20Fakes,%20Stubs%20and%20Dummies.html)
+- [slideshare 자바 테스트 자동화](https://www.slideshare.net/gyumee/ss-90206560)
+- [위키 mock object](https://en.wikipedia.org/wiki/Mock_object)
+- [Michal Lipski test-double-fakse-mocks](https://blog.pragmatists.com/test-doubles-fakes-mocks-and-stubs-1a7491dfa3da)
+- [jabberstory 마틴 파울러 모의객체는 스텁이 아니다 번역](http://testing.jabberstory.net/)
+- [martinfowler 모의객체는 스텁이 아니다](https://martinfowler.com/articles/mocksArentStubs.html)
+- [spockframework stub](http://spockframework.org/spock/docs/1.1/all_in_one.html#Stubs)
+- [stackflow spy 프레임워크 mock, stub, spy](https://stackoverflow.com/questions/24413184/difference-between-mock-stub-spy-in-spock-test-framework)
+- [solutionsiq mock or not mock](https://www.solutionsiq.com/resource/blog-post/to-mock-or-not-to-mock-is-that-even-a-question/)
+- [openjdk 해시셋 git](https://github.com/openjdk-mirror/jdk7u-jdk/blob/master/src/share/classes/java/util/HashSet.java)
 
 
