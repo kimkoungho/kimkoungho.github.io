@@ -1,7 +1,7 @@
 ---
 title: "Docker 란?"
 excerpt: ""
-categories: 
+categories: devops
 tags:
     - docker 
     - docker 개념

@@ -1,7 +1,7 @@
 ---
 title: "가상화(Virtualization)"
 excerpt: ""
-categories: 
+categories: devops
 tags:
   - 가상화
   - Virtualization
