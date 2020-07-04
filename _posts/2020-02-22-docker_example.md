@@ -5,6 +5,8 @@ categories: devops
 tags:
     - docker 설치 
     - dockerfile 명령어 
+    - dockerfile 작성법
+    - docker container ssh 
 last_modified_at: 2020-05-31
 ---
 
@@ -15,9 +17,9 @@ last_modified_at: 2020-05-31
   
 ## 도커 설치
 centos 7 에서 설치를 진행함  
-- [centos 도커 설치](https://docs.docker.com/engine/install/centos/) 
-
-```shell script
+- [centos 도커 설치](https://docs.docker.com/engine/install/centos/)   
+  
+```shell
 $ sudo yum install -y yum-utils \
   device-mapper-persistent-data \
   lvm2
@@ -29,11 +31,13 @@ $ sudo yum install -y docker-ce docker-ce-cli containerd.io
  
 $ sudo systemctl start docker
 ```
+
 - 이렇게 도커를 설치하고 나면 도커 데몬이 뜨게 된다 
   
 리눅스 환경에서는 도커 데몬을 위한 유저를 추가해주어야 함 
-- 도커 데몬은 root 권한이 필요한데 도커 유저인 docker 는 root 권한이 없기 때문에 추가가 필요 
-```shell script
+- 도커 데몬은 root 권한이 필요한데 도커 유저인 docker 는 root 권한이 없기 때문에 추가가 필요
+ 
+```shell
 # 확인
 $ ls -lah /var/run/docker.sock
 srw-rw---- 1 root root 0  8월  3 14:49 /var/run/docker.sock
@@ -68,7 +72,7 @@ mac 환경 설치는 아래 가이드에 따라서 설치 파일을 다운로드
 ![No Image](/assets/images/posts/20200222/dockerfile_image_container.png)
 
 ## 도커 설치 확인하기  
-```shell script
+```shell
 $ docker version
 Client: Docker Engine - Community
  Version:           19.03.5
@@ -180,7 +184,7 @@ LABEL "com.example.vendor"="ACME Incorporated"
 - 부모 이미지의 라벨은 자식 이미지가 상속 
   
 라벨 출력방법
-```shell script
+```shell
 $ docker image inspect --format='' myimage
 ```
 
@@ -227,7 +231,7 @@ EXPOSE 80/tcp
 - EXPOSE 명령은 실제로 해당 포트를 띄우는 것이 아니라 이미지를 만드는 사람과 컨테이너를 띄우는 사람간의 문서로써의 역할 
 
 실제로 포트를 바인딩하는 예
-```shell script
+```shell
 $ docker run -p 80:80/tcp
 ```
 - 호스트 os 의 80 포트를 컨테이너 80 포트로 바인딩
@@ -337,7 +341,8 @@ CMD ["sudo", "/usr/sbin/sshd", "-D"]
 
 ## Dockerfile 실행 
 - 이미지 빌드하기 
-```shell script
+
+```shell
 # 형식: docker image build -t 이미지명[:태그명] Dockerfile 경로
 $ docker build -t centos7_ssh:latest . 
 # -t 이미지_이름:버전 
@@ -350,7 +355,8 @@ centos7_ssh                                          latest              47e9c5c
 ```
 
 - 컨테이너 뛰워보기  
-```shell script
+
+```shell
 $ docker run --name node1 \
       --rm \
       -d centos7_ssh 
@@ -367,7 +373,8 @@ d41861cf9683        centos7_ssh         "sudo /usr/sbin/sshd…"   6 seconds ago
 ```
 
 - 실제 접속을 해보자 
-```shell script
+
+```shell
 # node1 에 bash 로 접속 
 $ docker exec -it node1 /bin/bash
 bash-4.2$
@@ -381,14 +388,16 @@ bash-4.2$
 - ssh 로 접속해보기 
 node1 에서 node2 로 ssh 접속   
 먼저 node2 의 IP 를 확인  
-```shell script
+
+```shell
 bash-4.2$ ifconfig
 eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
       inet 172.17.0.3  netmask 255.255.0.0  broadcast 172.17.255.255
 ...
 ```
 node1 에서 node2 로 접속
-```shell script
+
+```shell
 bash-4.2$ ssh 172.17.0.3
 The authenticity of host '172.17.0.3 (172.17.0.3)' can't be established.
 ECDSA key fingerprint is SHA256:CEoPcuVROOzbABUO5CCsEf0KI+58qxIagaizYTblLHU.
@@ -396,7 +405,8 @@ ECDSA key fingerprint is MD5:12:0b:86:9a:fb:db:de:6f:81:46:1b:47:1b:bc:79:b6.
 Are you sure you want to continue connecting (yes/no)? 
 ```
 - known_hosts 에 추가할 것인지 묻는데 yes 때리면 됨 
-```shell script
+
+```shell
 -bash-4.2$ ifconfig
 eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
       inet 172.17.0.3  netmask 255.255.0.0  broadcast 172.17.255.255
@@ -408,5 +418,3 @@ bash-4.2$
 ## Reference
 - [위키북스 도커/쿠버네티스를 활용한 컨테이너 개발입문](https://wikibook.co.kr/docker-kubernetes/) 2장 
 - [도커 dockerfile 래퍼런스](https://docs.docker.com/engine/reference/builder/)
-- [geekflare의 docker_tutorial](https://geekflare.com/dockerfile-tutorial/)
-- [도커 설치 및 시작하기](https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html)
