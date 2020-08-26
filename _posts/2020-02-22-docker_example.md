@@ -415,6 +415,15 @@ eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 bash-4.2$
 ```
 
+## TODO:
+- docker 관련 명령어 정리
+* 이미지 search, pull, ls, rm
+* 컨테이너 ls, stop, start, rm, stats
+- 이미지에 태그 부여하기 
+- prune : 일괄삭제 명령어
+- 도커 컴포즈 
+
+
 ## Reference
 - [위키북스 도커/쿠버네티스를 활용한 컨테이너 개발입문](https://wikibook.co.kr/docker-kubernetes/) 2장 
 - [도커 dockerfile 래퍼런스](https://docs.docker.com/engine/reference/builder/)
