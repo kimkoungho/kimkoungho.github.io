@@ -299,6 +299,16 @@ spec:
             name: cm-file
 ```
 
+
+### 액세스 모드
+- ReadWriteOnce : 단일 노드에 의한 읽기-쓰기로 마운트 될 수 있음
+- ReadOnlyMany : 여러 노드에 의한 읽기 전용으로 마운트 될 수 있음 
+- ReadWriteMany : 여러 노드에 의한 읽기-쓰기로 마운트 될 수 있음 
+ㄴ 컴퓨트 엔진 영구 디스크에서 지원하는 Persistant Volume 은 해당 모드를 지원하지 않음 
+
+### deployment vs statefulset 
+
+
 ## helm
 https://github.com/helm/helm
 
@@ -402,6 +412,11 @@ kubectl 을 사용하여 컨테이너가 waiting 인 파드를 쿼리하면, 컨
 
 ### 컨테이너 probe
 프로브는 컨테이너에서 kubelet 에 의해 주기적으로 수행되는 진단  
+
+
+- 사내 쿠버네티스를 사용하다가 Liveness probe failed 과 Readiness probe failed 이 발생하는 문제가 발생함 ...
+
+https://medium.com/finda-tech/kubernetes-pod%EC%9D%98-%EC%A7%84%EB%8B%A8%EC%9D%84-%EB%8B%B4%EB%8B%B9%ED%95%98%EB%8A%94-%EC%84%9C%EB%B9%84%EC%8A%A4-probe-7872cec9e568
 
 
 
