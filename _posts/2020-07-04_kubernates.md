@@ -96,7 +96,7 @@ $ kubectl create # 원하는 상태 생성
 ### Pod 
 [공식_쿠버네티스 Pod](https://kubernetes.io/ko/docs/concepts/workloads/pods)  
 
-![node_and_pod](/assets/images/posts/20200704/node_and_pod.png)    
+![node_pod](/assets/images/posts/20200704/node_pod.png)    
 - 파드는 쿠버네티스 애플리케이션의 배포가능한 가장 작은 단위로 한 개 이상의 컨테이너와 스토리지, 네트워크 속성이 있음
 - 파드는 노드에 배치되는 컨테이너 그룹의 논리적인 개념이라고 보면됨 
 - Pod 에 속한 컨테이너들은 Pod 의 네트워크와 스토리지를 공유하고 localhost 로 서로 접근이 가능함  
