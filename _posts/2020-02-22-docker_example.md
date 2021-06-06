@@ -418,5 +418,3 @@ bash-4.2$
 ## Reference
 - [위키북스 도커/쿠버네티스를 활용한 컨테이너 개발입문](https://wikibook.co.kr/docker-kubernetes/) 2장 
 - [도커 dockerfile 래퍼런스](https://docs.docker.com/engine/reference/builder/)
-- [geekflare의 docker_tutorial](https://geekflare.com/dockerfile-tutorial/)
-- [도커 설치 및 시작하기](https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html)

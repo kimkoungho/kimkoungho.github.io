@@ -19,7 +19,7 @@ dotCloud 라는 PaaS 기업의 창업자인 Solomon Hykes 가 사내 프로젝�
 발표 이후 도커가 엄청난 인기를 끌면서 회사 이름을 dotCloud 에서 Docker Inc 로 바꾸고 2014년 6월 docker 1.0 을 발표함  
   
 현재 Solomon Hykes 는 Docker 를 퇴사 했는데, 창립자이면서 도커를 퇴사하는 Solomon Hykes 심정을 도커 블로그에 남겼다. 
-- [Solomon Hykes 가 퇴사하면서 남긴 포스팅](docker.com/blog/au-revoir/)
+- [Solomon Hykes 가 퇴사하면서 남긴 포스팅](https://www.docker.com/blog/au-revoir/)
 
 
 # 컨테이너란?
