@@ -81,7 +81,7 @@ $ kubectl create # 원하는 상태 생성
 **쿠버네티스의 핵심은 상태이며 쿠버네티스를 사용하려면 어떤 상태들이 있고 어떻게 상태를 선언해야 하는지 알아야 함** 
 
 ### 쿠버네티스 Object
-[쿠버네티스 오브젝트_doc](https://kubernetes.io/ko/docs/concepts/overview/working-with-objects/kubernetes-objects/)
+[공식_쿠버네티스 Object](https://kubernetes.io/ko/docs/concepts/overview/working-with-objects/kubernetes-objects/)  
 쿠버네티스는 상태를 나타내기 위해서 오브젝트를 이용하며 구체적으로는 아래와 같음   
 - 어떤 컨테이너화된 애플리케이션이 동작 중인지 (+어느 노드인지)
 - 그 애플리케이션이 사용가능한 리소스 
@@ -94,7 +94,7 @@ $ kubectl create # 원하는 상태 생성
 > 쿠버네티스 오브젝트는 다양한 종류가 있는데, 여기서는 자주 사용되는 몇 가지만 소개함 
  
 ### Pod 
-[쿠버네티스 Pod_doc](https://kubernetes.io/ko/docs/concepts/workloads/pods)  
+[공식_쿠버네티스 Pod](https://kubernetes.io/ko/docs/concepts/workloads/pods)  
 
 ![node_and_pod](/assets/images/posts/20200704/node_and_pod.png)    
 - 파드는 쿠버네티스 애플리케이션의 배포가능한 가장 작은 단위로 한 개 이상의 컨테이너와 스토리지, 네트워크 속성이 있음
@@ -104,14 +104,14 @@ $ kubectl create # 원하는 상태 생성
 - 실제 어플리케이션은 Pod 내부의 container 로 구동되기 때문에 외부에서 접근 할 수 있는 방법을 정의해야 한다     
  
 ### ReplicaSet 
-[쿠버네티스 ReplicaSet_doc](https://kubernetes.io/ko/docs/concepts/workloads/controllers/replicaset/)
+[공식_쿠버네티스 ReplicaSet](https://kubernetes.io/ko/docs/concepts/workloads/controllers/replicaset/)  
 Pod 를 여러 개 복제하여 생성하고 관리하는 오브젝트  
 레플리카 세트를 이용하면 지정된 수의 레플리카 파드가 유지되도록 보장해줌  
 일반적으로 레플리카 세트를 직접 사용하기 보다는 아래 나오는 디플로이먼트(Deployment) 를 사용함     
 > 공식 도큐에서도 디플로이먼트 사용을 권장하고 있다  
 
 ### Deployment
-[쿠버네티스_Deployment_doc](https://kubernetes.io/ko/docs/concepts/workloads/controllers/deployment/)
+[공식_쿠버네티스_Deployment](https://kubernetes.io/ko/docs/concepts/workloads/controllers/deployment/)    
 디플로이먼트는 레플리카 셋의 상위 개념으로 추가적인 유용한 기능들을 제공하는 오브젝트  
 ㄴ 파드 개수를 유지 해줄 뿐만 아니라 배포 작업을 좀 더 세분화 하여 관리가 가능함  
 ㄴ ex) 롤링 업데이트, 블루/그린 배포 등      
@@ -125,7 +125,7 @@ Pod 를 여러 개 복제하여 생성하고 관리하는 오브젝트
 롤백을 수행한 경우에 쿠버네티스는 이 리비전을 이용하여 롤백을 수행한다    
 
 ### Service
-[쿠버네티스_Service_doc](https://kubernetes.io/ko/docs/concepts/services-networking/service/)
+[공식_쿠버네티스_Service](https://kubernetes.io/ko/docs/concepts/services-networking/service/)  
 네트워크와 관련된 오브젝트로써 파드를 외부 네트워크와 연결해주고 여러 개의 Pod 를 바라보는 내부 로드 밸런서를 생성할 때 사용한다  
 
 말이 좀 어려운데, 왜 필요한지 먼저 살펴보자   
@@ -163,7 +163,7 @@ NodePort 타입은 자동으로 ClusterIP 가 생성됨
  
 > Ingress 를 이용하여 서비스를 노출시킬 수 있는데, 서비스 유형은 아니지만 클러스터의 진입점 역할을 수행함 
 ### Ingress
-[쿠버네티스_Ingress_doc](https://kubernetes.io/ko/docs/concepts/services-networking/ingress/)
+[공식_쿠버네티스_Ingress](https://kubernetes.io/ko/docs/concepts/services-networking/ingress/)  
 인그레스는 클러스터 내의 서비스에 대한 외부 접근을 관리하는 API 오브젝트로 일반적으로 HTTP 를 관리    
 
 인그레스의 간단한 예시  
@@ -172,24 +172,30 @@ NodePort 타입은 자동으로 ClusterIP 가 생성됨
 - 인그레스가 위의 기능들을 정의 해둔 자원이라면 인그레스 컨트롤러는 정의한 대로 동작하게 해주는 관리자  
 - 클라우드 상에서는 일반적으로 로드 밸런서 서비스들과 인그레스를 연동해 주지만, 직접 인그레스를 사용하기 위해서는 인그레스 컨트롤러를 인그레스와 직접 연동해주어야 함  
   
-
 ### Volume
-
-### 
-### Job
-
+[공식_쿠버네티스_Volume](https://kubernetes.io/ko/docs/concepts/storage/volumes/)  
+Volume 은 저장소와 관련된 오브젝트다  
+  
+볼륨이 필요한 이유   
+- 컨테이너의 특성 상 어떤 문제가 발생하여 컨테이너가 삭제되면 데이터도 같이 삭제된다
+- ex) 컨테이너 런타임에 생성된 로그 파일 
+- 컨테이너가 종료되더라도 유지해야 하는 파일을 저장하기 위해서 볼륨을 이용해야 함  
+  
+볼륨은 호스트 디렉토리를 그대로 사용할 수 있고 EBS 같은 스토리지를 동적으로 생성하여 사용 가능함  
+- 임시 볼륨인 Pod 의 볼륨과 영구 저장용 볼륨인 퍼시스턴트 볼륨 등이 있음  
 
 
 ## 래퍼런스 
-- [공식 doc - 쿠버네티스란 무엇인가?](https://kubernetes.io/ko/docs/concepts/overview/what-is-kubernetes/)
+- [공식_쿠버네티스란 무엇인가?](https://kubernetes.io/ko/docs/concepts/overview/what-is-kubernetes/)
 - [위키북스 도커/쿠버네티스를 활용한 컨테이너 개발입문](https://wikibook.co.kr/docker-kubernetes/)
 - [subicura - 쿠버네티스 기본](https://subicura.com/2019/05/19/kubernetes-basic-1.html)
 - [Redhat container orchestration](https://www.redhat.com/ko/topics/containers/what-is-container-orchestration)
 - [modolee 블로그 - kubernetes-newbie-guide-01](https://velog.io/@modolee/kubernetes-newbie-guide-01)
-- [쿠버네티스 오브젝트_doc](https://kubernetes.io/ko/docs/concepts/overview/working-with-objects/kubernetes-objects/)
-- [쿠버네티스 pod_doc](https://kubernetes.io/ko/docs/concepts/workloads/pods) 
-- [쿠버네티스 ReplicaSet_doc](https://kubernetes.io/ko/docs/concepts/workloads/controllers/replicaset/)
-- [쿠버네티스_Deployment_doc](https://kubernetes.io/ko/docs/concepts/workloads/controllers/deployment/)
-- [쿠버네티스_Service_doc](https://kubernetes.io/ko/docs/concepts/services-networking/service/)
+- [공식_쿠버네티스 Object](https://kubernetes.io/ko/docs/concepts/overview/working-with-objects/kubernetes-objects/)
+- [공식_쿠버네티스 Pod](https://kubernetes.io/ko/docs/concepts/workloads/pods) 
+- [공식_쿠버네티스 ReplicaSet](https://kubernetes.io/ko/docs/concepts/workloads/controllers/replicaset/)
+- [공식_쿠버네티스_Deployment](https://kubernetes.io/ko/docs/concepts/workloads/controllers/deployment/)
+- [공식_쿠버네티스_Service_doc](https://kubernetes.io/ko/docs/concepts/services-networking/service/)
 - [https://arisu1000.tistory.com/27838](https://arisu1000.tistory.com/27838)
-- [쿠버네티스_Ingress_doc](https://kubernetes.io/ko/docs/concepts/services-networking/ingress/)
+- [공식_쿠버네티스_Ingress](https://kubernetes.io/ko/docs/concepts/services-networking/ingress/)
+- [공식_쿠버네티스_Volume](https://kubernetes.io/ko/docs/concepts/storage/volumes/) 
