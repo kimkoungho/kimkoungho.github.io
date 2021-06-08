@@ -6,7 +6,7 @@ tags:
     - kubernates
     - kubernates 개념 
     - kubernates object 
-last_modified_at: 2021-06-05
+last_modified_at: 2021-06-06
 ---
 
 # kubernates
