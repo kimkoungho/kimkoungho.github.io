@@ -12,7 +12,7 @@ last_modified_at: 2022-02-01
 
 ## 쿠버네티스 클러스터 아키텍처
 - 쿠버네티스의 아키텍쳐는 서비스 검색을 위해 유연하고 느슨하게 결합된 메커니즘을 제공 
-- 대부분의 분산 컴퓨팅 플랫폼과 마탄가지로 쿠버네티스 클러스터는 하나 이상의 마스터와 여러 컴퓨팅 노드로 구성됨
+- 대부분의 분산 컴퓨팅 플랫폼과 마찬가지로 쿠버네티스 클러스터는 하나 이상의 마스터와 여러 컴퓨팅 노드로 구성됨
 
 ![kubernetes_architecture](/assets/images/posts/20201201/kubernetes_architecture.png)<br/>
 출처: [https://tkssharma.com/kubernetes_architecture/](https://tkssharma.com/kubernetes_architecture/)
@@ -40,7 +40,7 @@ last_modified_at: 2022-02-01
 ### 워커 노드
 - 워커 노드는 실제 배포되는 컨테이너 어플리케이션을 실행함 
 - 각 워커 노드는 마스터와 통신을 위한 쿠버네티스 에이전트 (kubelet) 존재
-  - kubelet 은 터케니어늬 life cycle 관리하고 볼륨(CSI) 및 네트워크(CNI) 관리 
+  - kubelet 은 컨테이너의 life cycle 관리하고 볼륨(CSI) 및 네트워크(CNI) 관리 
 - 컨테이너 실행을 위한 컨테이너 런타임(docker)
 - 어플리케이션 구성 요소 간의 네트워크 트래픽을 로드밸런싱 하는 쿠버네티스 서비스 프록시(kube-proxy)
 - 워커 노드는 로깅, 모니터링, 서비스 검색 및 추가 기능을 위한 추가 구성요소도 실행될 수 있음
